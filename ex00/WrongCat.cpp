@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 10:33:19 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/21 10:34:58 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:58:56 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,22 @@ WrongCat::WrongCat(void) : WrongAnimal()
 
 WrongCat::WrongCat(WrongCat const &src) : WrongAnimal(src)
 {
-	std::cout << GREEN << "WrongCat copy constructor called" << RESET << std::endl;
+	std::cout << GREEN << "WrongCat copy constructor called" << RESET
+			  << std::endl;
 	*this = src;
-	return;
 }
 
 WrongCat::~WrongCat(void)
 {
 	std::cout << GREEN << "WrongCat destructor called" << RESET << std::endl;
-	return;
 }
 
 // Copy constructor
 
 WrongCat &WrongCat::operator=(WrongCat const &rhs)
 {
-	std::cout << GREEN << "WrongCat assignation operator called" << RESET << std::endl;
+	std::cout << GREEN << "WrongCat assignation operator called" << RESET
+			  << std::endl;
 	if (this != &rhs)
 		WrongAnimal::operator=(rhs);
 	return *this;
@@ -49,5 +49,4 @@ WrongCat &WrongCat::operator=(WrongCat const &rhs)
 void WrongCat::makeSound(void) const
 {
 	std::cout << GREEN << "Meow" << RESET << std::endl;
-	return;
 }

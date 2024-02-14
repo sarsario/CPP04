@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 08:27:21 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/21 10:16:30 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:52:04 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ public:
 	// Constructors and destructors
 	Animal(void);
 	Animal(Animal const &src);
+	Animal(std::string type);
 	virtual ~Animal(void);
 
-	// Copy constructor
+	// Asignation operator
 	Animal &operator=(Animal const &rhs);
 
 	// Getter
