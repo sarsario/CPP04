@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 11:34:00 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/21 11:37:23 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 16:22:47 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,18 @@ Brain &Brain::operator=(Brain const &rhs)
 			this->_ideas[i] = rhs._ideas[i];
 	}
 	return *this;
+}
+
+// Getter
+
+std::string *Brain::getIdeas(void)
+{
+	return this->_ideas;
+}
+
+// Setter
+
+void Brain::setIdea(int index, std::string idea)
+{
+	this->_ideas[index] = idea;
 }

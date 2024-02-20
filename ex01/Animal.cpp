@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 09:41:39 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/21 11:39:02 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 16:10:02 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,25 @@
 Animal::Animal(void)
 {
 	std::cout << INDIGO << "Animal constructor called" << RESET << std::endl;
-	return;
 }
 
 Animal::Animal(Animal const &src)
 {
-	std::cout << INDIGO << "Animal copy constructor called" << RESET << std::endl;
+	std::cout << INDIGO << "Animal copy constructor called" << RESET
+			  << std::endl;
 	*this = src;
-	return;
 }
 
 Animal::~Animal(void)
 {
 	std::cout << INDIGO << "Animal destructor called" << RESET << std::endl;
-	return;
 }
 
 // Copy constructor
 Animal &Animal::operator=(Animal const &rhs)
 {
-	std::cout << INDIGO << "Animal assignation operator called" << RESET << std::endl;
+	std::cout << INDIGO << "Animal assignation operator called" << RESET
+			  << std::endl;
 	if (this != &rhs)
 		this->_type = rhs._type;
 	return *this;
@@ -51,5 +50,4 @@ std::string Animal::getType(void) const
 void Animal::makeSound(void) const
 {
 	std::cout << INDIGO << "Animal sound" << RESET << std::endl;
-	return;
 }

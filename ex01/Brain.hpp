@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 11:30:13 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/21 11:36:13 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 16:23:20 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ public:
 	~Brain(void);
 
 	Brain &operator=(Brain const &rhs);
+
+	// Getters and setters
+	std::string *getIdeas(void);
+	void setIdea(int index, std::string idea);
 
 protected:
 	std::string _ideas[100];
